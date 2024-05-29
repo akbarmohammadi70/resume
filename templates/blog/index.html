@@ -5,12 +5,12 @@
   class="d-flex flex-column justify-content-center align-items-center"
 >
   <div class="hero-container" data-aos="fade-in">
-    <h1>Alex Smith</h1>
+    <h1>{{name}} {{family}}</h1>
     <p>
-      I'm
+      I'm a
       <span
         class="typed"
-        data-typed-items="Designer, Developer, Freelancer, Photographer"
+        data-typed-items="Developer, DevOps, SRE"
       ></span>
     </p>
   </div>
@@ -65,7 +65,7 @@
         </p>
       </div>
 
-      <div class="row">
+      {% comment %} <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
           <img
             src="{% static 'assets/img/profile-img.jpg' %}"
@@ -132,7 +132,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
   <!-- End About Section -->
 
   <!-- ======= Facts Section ======= -->
@@ -252,7 +252,7 @@
           <li>ArgoCD</li>
       </ul>
       </div>
-
+{% comment %} 
       <div class="row skills-content">
         <div class="col-lg-6" data-aos="fade-up">
           <div class="progress">
@@ -335,7 +335,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
   </section>
   <!-- End Skills Section -->
@@ -472,7 +472,7 @@
         </p>
       </div>
 
-      <div class="row" data-aos="fade-up">
+      {% comment %} <div class="row" data-aos="fade-up">
         <div class="col-lg-12 d-flex justify-content-center">
           <ul id="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
@@ -481,9 +481,9 @@
             <li data-filter=".filter-web">Web</li>
           </ul>
         </div>
-      </div>
+      </div> {% endcomment %}
 
-      <div
+      {% comment %} <div
         class="row portfolio-container"
         data-aos="fade-up"
         data-aos-delay="100"
@@ -685,7 +685,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
   </section>
   <!-- End Portfolio Section -->
@@ -706,7 +706,7 @@
         </p>
       </div>
 
-      <div class="row">
+      {% comment %} <div class="row">
         <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
           <div class="icon"><i class="bi bi-briefcase"></i></div>
           <h4 class="title"><a href="">Lorem Ipsum</a></h4>
@@ -775,7 +775,7 @@
             tempore, cum soluta nobis est eligendi
           </p>
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
   </section>
   <!-- End Services Section -->
@@ -936,7 +936,7 @@
                 Mobile: 0989214383005
             </li>
             <li>
-                Gmail: <a href="mailto:akbar.mohammadi70@gmail.com">akbar.mohammadi70@gmail.com</a>
+                Gmail: <a href="mailto:{{email}}">{{email}}</a>
             </li>
         </ul>
         </p>
@@ -954,13 +954,13 @@
             <div class="email">
               <i class="bi bi-envelope"></i>
               <h4>Email:</h4>
-              <p>info@example.com</p>
+              <p>{{email}}</p>
             </div>
 
             <div class="phone">
               <i class="bi bi-phone"></i>
               <h4>Call:</h4>
-              <p>+1 5589 55488 55s</p>
+              <p>{{phone}}</p>
             </div>
 
             <iframe
